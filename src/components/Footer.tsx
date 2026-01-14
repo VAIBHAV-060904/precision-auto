@@ -8,9 +8,9 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <img 
-                src="/logo1.png" 
-                alt="Precision Auto Studio" 
+              <img
+                src={`${import.meta.env.BASE_URL}logo1.png`}
+                alt="Precision Auto Studio"
                 className="h-10 w-auto"
               />
             </div>

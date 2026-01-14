@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Car, Calendar, Clock, User, Mail, Phone, Send } from "lucide-react";
 
+import { toast } from "sonner";
+
 const BookingForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -16,7 +18,18 @@ const BookingForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Booking submitted:", formData);
+    toast.success("Booking request sent successfully!");
     // Handle form submission
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      vehicleType: "",
+      service: "",
+      date: "",
+      time: "",
+      message: "",
+    });
   };
 
   const handleChange = (
