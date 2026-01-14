@@ -80,7 +80,7 @@ const BeforeAfter = () => {
             <img
 
 
-              src="/car-after.png"
+              src={`${import.meta.env.BASE_URL}car-after.png`}
               alt="Car after detailing"
               className="w-full h-full object-cover pointer-events-none"
               draggable={false}
@@ -95,9 +95,9 @@ const BeforeAfter = () => {
             style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
           >
             <img
-              src="/car-before.png"
+              src={`${import.meta.env.BASE_URL}car-before.png`}
               alt="Car before detailing"
-              
+
               className="w-full h-full object-cover pointer-events-none"
               draggable={false}
             />
@@ -106,19 +106,19 @@ const BeforeAfter = () => {
 
           {/* Slider Handle */}
           <div
-  className="absolute top-0 bottom-0 w-1 bg-primary"
-  style={{ left: `${sliderPosition}%` }}
->
+            className="absolute top-0 bottom-0 w-1 bg-primary"
+            style={{ left: `${sliderPosition}%` }}
+          >
             {/* Handle Circle */}
             <div
-  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
              w-12 h-12 rounded-full bg-primary
              flex items-center justify-center
              shadow-lg glow-primary
              cursor-grab active:cursor-grabbing"
-  onMouseDown={startDrag}
-  onTouchStart={startDrag}
->
+              onMouseDown={startDrag}
+              onTouchStart={startDrag}
+            >
               <div className="flex gap-0.5">
                 <div className="w-0.5 h-4 bg-primary-foreground rounded-full" />
                 <div className="w-0.5 h-4 bg-primary-foreground rounded-full" />

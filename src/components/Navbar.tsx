@@ -22,19 +22,18 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-background/80 backdrop-blur-xl border-b border-border"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 h-12">
-            <img 
-              src="/logo1.png" 
-              alt="Precision Auto Studio" 
+            <img
+              src={`${import.meta.env.BASE_URL}logo1.png`}
+              alt="Precision Auto Studio"
               className="h-full w-auto"
             />
           </a>
